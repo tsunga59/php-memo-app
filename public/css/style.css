@@ -1,0 +1,317 @@
+@charset "UTF-8";
+@import url("reset.css");
+/* 基本設定 */
+/* ============================================ */
+/* 色コード */
+/* ============================================ */
+/* ブレイクポイント */
+/* ============================================ */
+/* 画面サイズ表示・非表示 */
+/* ============================================ */
+.sp {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .pc {
+    display: none;
+  }
+  .sp {
+    display: block;
+  }
+}
+
+/* 共通設定 */
+/* ============================================ */
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: 767px) {
+  html {
+    font-size: 45%;
+  }
+}
+
+body {
+  font-family: 'Noto Sans JP', "游ゴシック体", sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: 0.05rem;
+  line-height: 1.5;
+  color: #333;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+
+section {
+  width: 100%;
+  height: 100%;
+  padding: 60px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.fa,
+.fas {
+  padding: 8px;
+  border-radius: 3px;
+}
+
+a,
+button {
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+a:hover,
+button:hover {
+  opacity: .7;
+}
+
+/* ユーザー登録・ログインフォーム */
+/* ============================================ */
+.register,
+.login {
+  height: 100vh;
+}
+
+.register .container,
+.login .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.register form,
+.login form {
+  width: 60%;
+  background-color: #f7f7f7;
+  padding: 60px 80px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+.register form .error_area,
+.login form .error_area {
+  padding: 20px 30px;
+  margin-bottom: 20px;
+  border: 1px solid #ec401a;
+  border-radius: 3px;
+}
+
+.register form .error_area p,
+.login form .error_area p {
+  color: #ec401a;
+}
+
+.register form table,
+.login form table {
+  width: 100%;
+  table-layout: fixed;
+  margin-bottom: 30px;
+}
+
+.register form table tr,
+.login form table tr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.register form table th,
+.login form table th {
+  width: 25%;
+  padding: 15px 0;
+}
+
+.register form table td,
+.login form table td {
+  width: 70%;
+  padding: 15px 0;
+}
+
+.register form table td input,
+.login form table td input {
+  width: 100%;
+  background-color: #fff;
+  padding: 5px 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0 0 2px #333;
+          box-shadow: 0 0 2px #333;
+  border-radius: 3px;
+}
+
+.register form button,
+.login form button {
+  display: block;
+  color: #fff;
+  background-color: #333;
+  padding: 10px 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 auto;
+  border-radius: 3px;
+}
+
+.register .account,
+.login .account {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.register .account a,
+.login .account a {
+  display: inline-block;
+  color: #3b70d1;
+  padding: 5px 0;
+}
+
+/* memo */
+/* ============================================ */
+.memo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 1000px;
+  padding: 0;
+}
+
+.memo_left {
+  width: 28%;
+  min-height: 100vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-right: 1px solid #ccc;
+}
+
+.memo_left .top_area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+}
+
+.memo_left .top_area p {
+  font-size: 1.8rem;
+}
+
+.memo_left .top_area .fa-sign-out-alt {
+  color: #fff;
+  background-color: #333;
+  margin-right: 5px;
+}
+
+.memo_left .top_area .fa-plus {
+  color: #fff;
+  background-color: #3b70d1;
+}
+
+.memo_left .memo_list a {
+  display: block;
+  padding: 15px 0 15px 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.memo_left .memo_list a.active {
+  background-color: #ccc;
+}
+
+.memo_left .memo_list .title {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.memo_left .memo_list .date {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.memo_left .memo_list .description {
+  font-size: 1.4rem;
+}
+
+.memo_right {
+  width: 72%;
+  min-height: 100vh;
+}
+
+.memo_right form {
+  height: 100%;
+}
+
+.memo_right .top_area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+}
+
+.memo_right .top_area p {
+  font-size: 1.8rem;
+}
+
+.memo_right .top_area .fa-pen {
+  color: #fff;
+  background-color: #3b70d1;
+  margin-right: 5px;
+}
+
+.memo_right .top_area .fa-trash {
+  color: #fff;
+  background-color: #ec401a;
+}
+
+.memo_right .content_area {
+  padding: 0 20px;
+  height: 100%;
+}
+
+.memo_right .content_area .title {
+  width: 100%;
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+}
+
+.memo_right .content_area .content {
+  width: 100%;
+  height: 100%;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,91 @@
+/* memo */
+/* ============================================ */
+.memo {
+    display: flex;
+    min-width: 1000px;
+    padding: 0;
+    &_left {
+        width: 28%;
+        min-height: 100vh;
+        box-sizing: border-box;
+        border-right: 1px solid #ccc;
+        .top_area {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            p {
+                font-size: 1.8rem;
+            }
+            .fa-sign-out-alt {
+                color: $baseColor;
+                background-color: $fontColor;
+                margin-right: 5px;
+            }
+            .fa-plus {
+                color: $baseColor;
+                background-color: $mainColor;
+            }
+        }
+        .memo_list {
+             a {
+                display: block;
+                padding: 15px 0 15px 20px;
+                border-bottom: 1px solid #ccc;
+                &.active {
+                    background-color: #ccc;
+                }
+            }
+            .title {
+                font-size: 1.8rem;
+                font-weight: bold;
+            }
+            .date {
+                font-size: 1.4rem;
+                font-weight: bold;
+                margin-right: 5px;
+            }
+            .description {
+                font-size: 1.4rem;
+            }
+        }
+    }
+    &_right {
+        width: 72%;
+        min-height: 100vh;
+        form {
+            height: 100%;
+        }
+        .top_area {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 20px;
+            p {
+                font-size: 1.8rem;
+            }
+            .fa-pen {
+                color: $baseColor;
+                background-color: $mainColor;
+                margin-right: 5px;
+            }
+            .fa-trash {
+                color: $baseColor;
+                background-color: $accentColor;
+            }
+        }
+        .content_area {
+            padding: 0 20px;
+            height: 100%;
+            .title {
+                width: 100%;
+                font-size: 2.4rem;
+                margin-bottom: 10px;
+            }
+            .content {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}

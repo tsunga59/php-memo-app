@@ -1,0 +1,117 @@
+/* 共通設定 */
+/* ============================================ */
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    @include sp {
+        font-size: 45%;
+    }
+}
+body {
+    font-family: 'Noto Sans JP', "游ゴシック体", sans-serif;
+    font-size: 1.6rem;
+    letter-spacing: 0.05rem;
+    line-height: 1.5;
+    color: $fontColor;
+    background-color: $baseColor;
+    overflow-x: hidden;
+}
+section {
+    width: 100%;
+    height: 100%;
+    padding: 60px 0;
+    box-sizing: border-box;
+}
+.container {
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
+.fa,
+.fas {
+    padding: 8px;
+    border-radius: 3px;
+}
+a,
+button {
+    transition: all .3s ease;
+    &:hover {
+        opacity: .7;
+    }
+}
+
+
+/* ユーザー登録・ログインフォーム */
+/* ============================================ */
+.register,
+.login {
+    height: 100vh;
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    form {
+        width: 60%;
+        background-color: $subColor;
+        padding: 60px 80px;
+        box-sizing: border-box;
+        margin: 0 auto;
+        border-radius: 5px;
+        .error_area {
+            padding: 20px 30px;
+            margin-bottom: 20px;
+            border: 1px solid $accentColor;
+            border-radius: 3px;
+            p {
+                color: $accentColor;
+            }
+        }
+        table {
+            width: 100%;
+            table-layout: fixed;
+            margin-bottom: 30px;
+            tr {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+            th {
+                width: 25%;
+                padding: 15px 0;
+            }
+            td {
+                width: 70%;
+                padding: 15px 0;
+                input {
+                    width: 100%;
+                    background-color: $baseColor;
+                    padding: 5px 10px;
+                    box-sizing: border-box;
+                    box-shadow: 0 0 2px $fontColor;
+                    border-radius: 3px;
+                }
+            }
+        }
+        button {
+            display: block;
+            color: $baseColor;
+            background-color: $fontColor;
+            padding: 10px 20px;
+            box-sizing: border-box;
+            margin: 0 auto;
+            border-radius: 3px;
+        }
+    }
+    .account {
+        margin-top: 40px;
+        text-align: center;
+        a {
+            display: inline-block;
+            color: $mainColor;
+            padding: 5px 0;
+        }
+    }
+}

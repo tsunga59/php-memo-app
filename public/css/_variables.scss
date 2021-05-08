@@ -1,0 +1,34 @@
+/* 基本設定 */
+/* ============================================ */
+@charset "utf-8";
+
+/* 色コード */
+/* ============================================ */
+$baseColor: #fff;
+$fontColor: #333;
+$mainColor: #3b70d1;
+$subColor: #f7f7f7;
+$accentColor: #ec401a;
+$btnColor: #22BA4F;
+
+/* ブレイクポイント */
+/* ============================================ */
+@mixin sp {
+    @media screen and (max-width: 767px) {
+        @content;
+    }
+}
+
+/* 画面サイズ表示・非表示 */
+/* ============================================ */
+.sp {
+    display: none;
+}
+@include sp {
+    .pc {
+        display: none;
+    }
+    .sp {
+        display: block;
+    }
+}
